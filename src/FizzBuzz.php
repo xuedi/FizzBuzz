@@ -17,7 +17,7 @@
 class FizzBuzz
 {
 
-    /** @var array $start */
+    /** @var array $range */
     private $range = [];
 
     /** @var array $moduloGroup */
@@ -51,7 +51,7 @@ class FizzBuzz
         if(!is_int($number) && !empty($number)) {
             throw new Exception("The parameter 'value' has to be a integer number.");
         }
-        if(!preg_match('/[a-zA-Z]{4}/',$name)) { //Todo: (?=[a-zA-Z]{4})(?=(?i)zz)
+        if(!preg_match('/[a-zA-Z]{4}/',$name)) { //Todo: (?=[a-zA-Z]{4})(?=(?i)zz) or so ...
             throw new Exception(
                 "The parameter 'name' has to consist out of [a-z] or [A-Z], has " .
                 "to contain 'zz' and has to be exactly 4 characters all together ;-)"
